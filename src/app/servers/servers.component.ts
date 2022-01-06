@@ -12,4 +12,7 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    serverId = 12;
+    serverStatus = 'Offline';
+
 }
