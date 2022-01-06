@@ -15,4 +15,7 @@ export class ServersComponent implements OnInit {
     serverId = 12;
     serverStatus = 'Offline';
 
+  getServerStatus() {
+    return this.serverStatus;
+  }
 }
