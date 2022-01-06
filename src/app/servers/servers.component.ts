@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   allowServerCreation = false;
+  serverCreationStatus = "No Server!";
 
   constructor() {
 
@@ -26,6 +27,10 @@ export class ServersComponent implements OnInit {
 
   getServerStatus() {
     return this.serverStatus;
+  }
+
+  onServerCreation() {
+    this.serverCreationStatus = "Server was created!";
   }
 
 }
