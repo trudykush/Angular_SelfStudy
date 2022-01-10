@@ -8,13 +8,13 @@
        [(ngModel)] = "serverName">
 
 <!--<p>{{ serverName }}</p>-->
-
+<!-- 
 <button class="btn btn-primary"
         [disabled] ="!checkServerName()"
-        (click) = "onServerCreation()"> Add Server </button>
+        (click) = "onServerCreation()"> Add Server </button> -->
 
 <!--<p>{{ serverCreationStatus }}</p>-->
-
+<!-- 
 <p *ngIf = "serverCreated">Server was created, server name is {{ serverName }}</p>
 
 <p>servers works!</p>
@@ -22,7 +22,29 @@
   [ngStyle]="{backgroundColor: getColor()}"
   [ngClass] = "{online: serverStatus === 'online'}">
   The server id is {{ serverId }} and status is {{ getServerStatus() }}
-</p>
+</p> -->
 
-<hr>
-<app-success-alert *ngFor="let server of servers"></app-success-alert>
+<br> <br> <br> <br>
+
+<button class="btn btn-primary"
+  (click) = "isContentShown = !isContentShown">
+  <h3>Display Details</h3>
+</button>
+
+<p *ngIf = "isContentShown">The Secret password = tuna</p>
+
+<br> <br> <br> <br>
+
+<button class="btn btn-primary"
+  (click) = "onToggleDetails()">
+  <h3>On Toggle</h3>
+</button>
+
+<div *ngFor="let log of buttonClickLog; let i = index"
+  [ngStyle] = "{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]='{online: i >= 5}'>
+  {{ log }}
+</div>
+
+<!-- <hr>
+<app-success-alert *ngFor="let server of servers"></app-success-alert> -->

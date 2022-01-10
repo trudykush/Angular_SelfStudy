@@ -12,6 +12,9 @@ export class ServersComponent implements OnInit {
   serverName = ''
   serverCreated = false;
   servers = ['TestServer', 'DevServer', 'ProdServer']
+  isContentShown = false
+  currentTime = new Date();
+  buttonClickLog = []
 
   constructor() {
 
@@ -20,8 +23,8 @@ export class ServersComponent implements OnInit {
     }, 2000);
 
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline'
-  }
 
+  }
   ngOnInit(): void {
   }
 
@@ -53,6 +56,12 @@ export class ServersComponent implements OnInit {
 
   getColor() {
     return this.serverStatus === 'offline' ? 'red' : 'green';
+  }
+
+  onToggleDetails() {
+    this.isContentShown = !this.isContentShown
+    this.buttonClickLog.push(new Date())
+    console.log(this.buttonClickLog);
   }
 
 }
