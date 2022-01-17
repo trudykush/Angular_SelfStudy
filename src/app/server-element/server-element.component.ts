@@ -58,7 +58,7 @@ export class ServerElementComponent implements OnInit,
     }
 
     ngOnDestroy() {
-          console.log('ngAfterViewChecked Called');
+      console.log('ngOnDestroy Called');
     }
 
 }
