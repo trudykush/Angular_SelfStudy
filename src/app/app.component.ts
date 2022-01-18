@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [{type: 'server', name: 'TestServer', content: 'Just a test'}];
 
-    onServerAdded(serverData: {serverName: string, serverContent: string}) {
+  onIntervalFired(firedNumber: number) {
+    console.log(firedNumber)
+  }
+}
+
+
+
+/* onServerAdded(serverData: {serverName: string, serverContent: string}) {
         this.serverElements.push({
           type: 'server',
           name: serverData.serverName,
@@ -27,7 +33,4 @@ export class AppComponent {
 
     onDestroyFirst() {
       this.serverElements.splice(0,1);
-    }
-
-
-}
+    } */
